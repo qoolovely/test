@@ -18,9 +18,6 @@ echo '<a href=' . $url . ' class="btn btn-primary">Login</a><br><br>';
 $url = 'https://access.line.me/oauth2/v2.1/authorize?scope=openid%20profile&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
 echo '<a href=' . $url . ' class="btn btn-primary">Login using OpenID Connect</a><br><br>';
 
-$url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&prompt=consent&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
-echo '<a href=' . $url . ' class="btn btn-primary">Force Consent Screen</a><br><br>';
-
 ?>
 </div>
 </body>
