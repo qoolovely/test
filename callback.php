@@ -37,7 +37,7 @@ if (isset($_GET['code'])) {
     );
     $profileString = file_get_contents($url, false, stream_context_create($context));
     $profile = json_decode($profileString, true);
-    echo '<img style="width:100%" src="' . htmlspecialchars($profile["pictureUrl"], ENT_QUOTES) . '" />';
+    //echo '<img style="width:10%" src="' . htmlspecialchars($profile["pictureUrl"], ENT_QUOTES) . '" />';
     echo '<h2>displayName</h2>';
     echo '<p class="text-muted">' . htmlspecialchars($profile["displayName"], ENT_QUOTES) . '</p>';
     echo '<h2>userId</h2>';
