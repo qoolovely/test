@@ -13,7 +13,19 @@
 $callback = urlencode('https://' . $_SERVER['HTTP_HOST']  . '/callback.php');
 $key = sha1(microtime());
 $url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
-echo '<a href=' . $url . ' class="btn btn-primary">Login</a>' . PHP_EOL;
+echo '<a href=' . $url . ' class="btn btn-primary">Login</a><br><br>';
+
+$url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&prompt=consent&bot_prompt=normal&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
+echo '<a href=' . $url . ' class="btn btn-primary">Add Friend(Normal)</a><br><br>';
+
+$url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&prompt=consent&bot_prompt=aggressive&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
+echo '<a href=' . $url . ' class="btn btn-primary">Add Friend(Aggressive)</a><br><br>';
+
+$url = 'https://access.line.me/oauth2/v2.1/authorize?scope=openid%20profile&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
+echo '<a href=' . $url . ' class="btn btn-primary">Login using OpenID Connect</a><br><br>';
+
+$url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&prompt=consent&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
+echo '<a href=' . $url . ' class="btn btn-primary">Force Consent Screen</a><br><br>';
 
 ?>
 </div>
