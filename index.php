@@ -10,7 +10,7 @@
 <body>
 <div class="container">
 <?php
-$callback = urlencode('http://' . $_SERVER['HTTP_HOST']  . '/callback.php');
+$callback = urlencode('https://' . $_SERVER['HTTP_HOST']  . '/callback.php');
 $key = sha1(microtime());
 $url = 'https://access.line.me/oauth2/v2.1/authorize?scope=profile&response_type=code&client_id=1546810912&redirect_uri=' . $callback . '&state=' . $key;
 echo '<a href=' . $url . ' class="btn btn-primary">Login</a>' . PHP_EOL;
